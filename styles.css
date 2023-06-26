@@ -1,0 +1,227 @@
+:root{
+    /* Color palette */
+    
+    --white: #ffffff;
+    --black: #000000;
+    --green: #007d7b;
+
+    --fonts: Arial, Helvetica, sans-serif;
+}
+
+
+html {
+    background-color: var(--black);
+    font-family: var(--fonts);
+}
+header, #about,#gallery{
+    width: 80%;
+    max-width: 1300px;
+    min-width: 485px;
+    background-color: var(--white);
+    margin: 0 auto;
+    padding: 5px 10px;
+  }
+nav{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+nav ul li {
+    list-style: none;
+    display:inline-block;
+    margin: 10px 5px;
+    text-transform:uppercase;
+    padding: 1px;
+}
+[href="#top"] {
+    position:fixed;
+    bottom:0px;
+    right: 10px;
+    border-radius: 5px;
+}
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+a:hover {
+    background-color:var(--white);
+    color: var(--green);
+    border-radius: 5px;
+  }
+
+p {
+    font-size: 1.25em;
+    margin: 15px auto;
+}
+figcaption, label, input, small {
+    font-size: 1em;
+    margin: 5px;
+}
+nav a {
+    font-size: 1.5em;
+}
+h1 {
+    font-size: 3em;
+    text-transform:uppercase;
+    color: var(--green);
+
+}
+h2 {
+    font-size: 2em;
+    text-transform:uppercase;
+    text-align: center;
+}
+
+figure {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 5px;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+.image{
+    align-items: start;
+}
+
+figure:nth-child(2) figcaption,  
+figure:nth-child(4) figcaption,
+figure:nth-child(5) figcaption,
+figure:nth-child(8) figcaption,
+figure:nth-child(9) figcaption,
+figure:nth-child(10) figcaption,
+figure:nth-child(11) figcaption,
+figure:nth-child(12) figcaption{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    color: var(--black);
+    white-space: nowrap;
+}
+
+
+
+figure:nth-child(1) figcaption,
+figure:nth-child(3) figcaption,
+figure:nth-child(6) figcaption,
+figure:nth-child(7) figcaption{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width:100%;
+    padding: 5px;
+    text-align: center;
+}
+
+
+figure:nth-child(1) figcaption,
+figure:nth-child(2) figcaption,
+figure:nth-child(3) figcaption,
+figure:nth-child(7) figcaption,
+figure:nth-child(12) figcaption{
+    color:white;
+}
+
+#contact{
+    width:70%;
+    max-width: 1300px;
+    min-width: 485px;
+    background-color: var(--black);
+    margin: 0 auto;
+    padding:20px;
+    color: var(--white);
+}
+
+footer p{
+    font-family: var(--fonts);
+    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+#contact h2, #contact p{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    color:white;
+}
+
+::placeholder{
+    color:var(--green);
+    font-weight: bold;
+}
+
+input[type="submit"]{
+    background-color: var(--green);
+    color: var(--white);
+    padding: 0.5rem;
+    border-radius: 50px;
+    border: none;
+    margin: 10px auto;
+    width: 60%;
+    font-weight: bold;
+}
+input[type="submit"]:hover{
+	background-color: var(--white);
+    color: var(--green);
+}
+
+@media screen and (min-width: 880px){
+    .image{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    h1{
+        margin: 0;
+    }
+
+    figure:nth-child(3) figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (min-width: 1300px) {
+    .image{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+    nav{
+        justify-content: flex-end;
+    }
+
+    nav ul{
+        margin: 10px 100px;
+    }
+
+    figure:nth-child(3) figcaption{
+        position: absolute;
+        bottom: 0;
+        left:50%;
+        transform: translateX(-50%);
+        padding:1rem;
+    }
+}
